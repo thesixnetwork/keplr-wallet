@@ -6,10 +6,9 @@ import style from "./style.module.scss";
 import { useLanguage } from "../../languages";
 import { useIntl } from "react-intl";
 import { observer } from "mobx-react-lite";
-import { useStore } from "../../stores";
 
 export const SettingPage: FunctionComponent = observer(() => {
-  const { uiConfigStore } = useStore();
+  // const { uiConfigStore } = useStore();
 
   const language = useLanguage();
   const history = useHistory();
@@ -41,7 +40,7 @@ export const SettingPage: FunctionComponent = observer(() => {
         }
       );
 
-  const isDeveloperMode = uiConfigStore.isDeveloper;
+  // const isDeveloperMode = uiConfigStore.isDeveloper;
 
   return (
     <HeaderLayout
@@ -87,6 +86,20 @@ export const SettingPage: FunctionComponent = observer(() => {
         />
         <PageButton
           title={intl.formatMessage({
+            id: "setting.autolock",
+          })}
+          onClick={() => {
+            history.push({
+              pathname: "/setting/autolock",
+            });
+          }}
+          icons={useMemo(
+            () => [<i key="next" className="fas fa-chevron-right" />],
+            []
+          )}
+        />
+        {/* <PageButton
+          title={intl.formatMessage({
             id: "setting.security-privacy",
           })}
           onClick={() => {
@@ -98,8 +111,8 @@ export const SettingPage: FunctionComponent = observer(() => {
             () => [<i key="next" className="fas fa-chevron-right" />],
             []
           )}
-        />
-        <PageButton
+        /> */}
+        {/* <PageButton
           title={intl.formatMessage({
             id: "setting.export-to-mobile",
           })}
@@ -112,8 +125,8 @@ export const SettingPage: FunctionComponent = observer(() => {
             () => [<i key="next" className="fas fa-chevron-right" />],
             []
           )}
-        />
-        <PageButton
+        /> */}
+        {/* <PageButton
           title={intl.formatMessage({
             id: "setting.chain-active.title",
           })}
@@ -126,8 +139,8 @@ export const SettingPage: FunctionComponent = observer(() => {
             () => [<i key="next" className="fas fa-chevron-right" />],
             []
           )}
-        />
-        <PageButton
+        /> */}
+        {/* <PageButton
           title={intl.formatMessage({
             id: "setting.developer-mode",
           })}
@@ -150,8 +163,8 @@ export const SettingPage: FunctionComponent = observer(() => {
               <span className="custom-toggle-slider rounded-circle" />
             </label>,
           ]}
-        />
-        <PageButton
+        /> */}
+        {/* <PageButton
           title={intl.formatMessage({
             id: "setting.endpoints",
           })}
@@ -167,8 +180,8 @@ export const SettingPage: FunctionComponent = observer(() => {
             () => [<i key="next" className="fas fa-chevron-right" />],
             []
           )}
-        />
-        <PageButton
+        /> */}
+        {/* <PageButton
           title={intl.formatMessage({
             id: "setting.credit",
           })}
@@ -181,7 +194,7 @@ export const SettingPage: FunctionComponent = observer(() => {
             () => [<i key="next" className="fas fa-chevron-right" />],
             []
           )}
-        />
+        /> */}
       </div>
     </HeaderLayout>
   );

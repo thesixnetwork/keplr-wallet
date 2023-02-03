@@ -122,7 +122,7 @@ export const RegisterPage: FunctionComponent = observer(() => {
             <img
               className={style.introBrandSubText}
               src={require("../../public/assets/brand-sub-text.png")}
-              alt="The Interchain Wallet"
+              alt="The SIX Protocol Wallet"
             />
           </div>
         ) : null}
